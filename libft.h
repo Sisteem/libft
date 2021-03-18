@@ -6,14 +6,12 @@
 /*   By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/03 15:57:27 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/03/18 10:00:25 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include "libft_typedefs.h"
 
 # define GNL_BUFF_SIZE 50
 # define BUFF_SIZE 4096
@@ -21,6 +19,8 @@
 # ifndef EXIT_ON_ALLOC_FAIL
 #  define EXIT_ON_ALLOC_FAIL 0
 # endif
+
+# include "libft_typedefs.h"
 
 /*
 ** Memory
@@ -149,21 +149,5 @@ t_bigint	*ft_bigint_from_uint128(__uint128_t unbr);
 t_bigint	*ft_bigint_power(unsigned int b, unsigned int exp);
 int			ft_bigint_print(t_bigint *bg_int, int fd);
 int			ft_bigint_is_zero(t_bigint *bg_int);
-
-/*
-** Vector
-*/
-t_vector	*ft_vector_new(void);
-int			ft_vector_init(t_vector *vector);
-t_vector	*ft_vector_new_capacity(size_t capacity);
-int			ft_vector_init_capacity(t_vector *vector, size_t capacity);
-int			ft_vector_add(t_vector *vector, void *content, size_t content_size);
-int			ft_vector_add_at(t_vector *vector, size_t index,
-				void *content, size_t content_size);
-int			ft_vector_remove_at(t_vector *vector, size_t index,
-				void (*del)(void *content, size_t content_size));
-int			ft_vector_realloc(t_vector *vector, size_t new_capacity);
-void		ft_vector_free(t_vector *vec, t_bool free_vec,
-				void (*del)(void *content, size_t content_size));
 
 #endif

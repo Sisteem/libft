@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 08:56:12 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/03/03 15:57:14 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/03/18 10:04:52 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,6 @@ typedef struct	s_element {
 	void	*content;
 	size_t	content_size;
 }				t_element;
-
-typedef struct	s_vector {
-	t_element	**array;
-	size_t		capacity;
-	size_t		length;
-}				t_vector;
 
 typedef struct	s_bigint
 {

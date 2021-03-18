@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
+#    By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/03/08 11:28:00 by ylagtab          ###   ########.fr        #
+#    Updated: 2021/03/18 10:05:35 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,7 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o \
 	get_next_line.o ft_realloc.o ft_free_strings_array.o \
-	ft_vector_init.o ft_vector_add.o ft_vector_remove_at.o \
-	ft_vector_realloc.o ft_vector_free.o ft_malloc.o ft_strings_array_length.o
+	ft_malloc.o ft_strings_array_length.o
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
