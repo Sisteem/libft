@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/18 10:00:25 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/03/19 11:10:11 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # endif
 
 # include "libft_typedefs.h"
+# include "vector/vector.h"
 
 /*
 ** Memory

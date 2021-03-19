@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+         #
+#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/03/18 10:05:35 by ylagtab          ###   ########.fr        #
+#    Updated: 2021/03/19 11:07:29 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,14 @@ PRINTF = conv_di.o conv_u.o conv_o.o \
 	get_whole.o get_fraction.o round_float.o
 PRINTF_OBJ = $(addprefix ft_printf/$(OBJS_DIR)/, ${PRINTF})
 
+# vector
+VECTOR_INC = vector/vector.h vector/internal/vector_internal.h libft.h 
+VECTOR = vector_remove.o vector_push.o vector_pop_index.o vector_pop.o \
+	vector_insert_all.o vector_insert.o vector_init.o vector_free.o \
+	internal/vector_shrink.o internal/vector_grow_above.o \
+	internal/vector_grow.o
+VECTOR_OBJ = $(addprefix vector/$(OBJS_DIR)/, ${VECTOR})
+
 # objects directory
 OBJS_DIR = objs
 
@@ -82,8 +90,8 @@ RESET	= \033[0m
 # **************************************************************************** #
 all: $(NAME)
 
-$(NAME): $(LIBFT_OBJ) $(PRINTF_OBJ)
-	@ar rc $(NAME) $(LIBFT_OBJ) $(PRINTF_OBJ)
+$(NAME): $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ)
+	@ar rc $(NAME) $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ)
 	@echo "$(GREEN)LIB$(RESET) libft/$(NAME): $(GREEN)UPDATED!$(RESET)";
 
 $(LIBFT_OBJ): $(OBJS_DIR)/%.o : %.c $(LIBFT_INC)| $(OBJS_DIR)
@@ -95,6 +103,10 @@ $(PRINTF_OBJ): ft_printf/$(OBJS_DIR)/%.o : ft_printf/%.c $(PRINTF_INC) | $(OBJS_
 	@gcc $(CFLAGS) -c $< -o $@
 	@echo "$(YELLOW)OBJ$(RESET) libft/$@: $(YELLOW)UPDATED!$(RESET)";
 
+$(VECTOR_OBJ): vector/$(OBJS_DIR)/%.o : vector/%.c $(VECTOR_INC) | $(OBJS_DIR)
+	@mkdir -p $(dir $@)
+	@gcc $(CFLAGS) -c $< -o $@
+	@echo "$(YELLOW)OBJ$(RESET) libft/$@: $(YELLOW)UPDATED!$(RESET)";
 
 $(OBJS_DIR):
 	@if [ ! -d $(OBJS_DIR) ]; then \
@@ -105,6 +117,10 @@ $(OBJS_DIR):
 		echo "$(CYAN)DIR$(RESET) libft/ft_printf/$(OBJS_DIR)/: $(CYAN)CREATED!$(RESET)"; \
 		mkdir ft_printf/$(OBJS_DIR); \
 	fi;
+	@if [ ! -d vector/$(OBJS_DIR) ]; then \
+		echo "$(CYAN)DIR$(RESET) libft/vector/$(OBJS_DIR)/: $(CYAN)CREATED!$(RESET)"; \
+		mkdir vector/$(OBJS_DIR); \
+	fi;
 
 clean:
 	@if [ -d $(OBJS_DIR) ]; then \
@@ -114,6 +130,10 @@ clean:
 	@if [ -d ft_printf/$(OBJS_DIR) ]; then \
 		echo "$(RED)OBJ$(RESET) Printf objs: $(RED)REMOVED!$(RESET)"; \
 		rm -rf ft_printf/$(OBJS_DIR); \
+	fi;
+	@if [ -d vector/$(OBJS_DIR) ]; then \
+		echo "$(RED)OBJ$(RESET) Vector objs: $(RED)REMOVED!$(RESET)"; \
+		rm -rf vector/$(OBJS_DIR); \
 	fi;
 
 fclean: clean
