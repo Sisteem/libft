@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/19 11:10:11 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/20 16:20:13 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 # include "libft_typedefs.h"
 # include "vector/vector.h"
+# include "dyn_str/dyn_str.h"
 
 /*
 ** Memory

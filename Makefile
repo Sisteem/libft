@@ -6,7 +6,7 @@
 #    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/03/19 11:07:29 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/03/20 16:54:26 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@
 NAME = libft.a
 
 # compilation variables
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 
 MACROS =
@@ -25,7 +26,6 @@ ifeq ($(LIBFT_EXIT_ON_ALLOC_FAIL), 1)
     MACROS = -D EXIT_ON_ALLOC_FAIL=1
 endif
 
-CC = gcc
 
 # libft
 LIBFT_INC = libft.h
@@ -61,7 +61,7 @@ PRINTF = conv_di.o conv_u.o conv_o.o \
 	conv_p.o ft_printf.o parser.o \
 	util.o apply_conv_function.o read_numbers.o \
 	get_whole.o get_fraction.o round_float.o
-PRINTF_OBJ = $(addprefix ft_printf/$(OBJS_DIR)/, ${PRINTF})
+PRINTF_OBJ = $(addprefix $(OBJS_DIR)/ft_printf/, ${PRINTF})
 
 # vector
 VECTOR_INC = vector/vector.h vector/internal/vector_internal.h libft.h 
@@ -69,79 +69,42 @@ VECTOR = vector_remove.o vector_push.o vector_pop_index.o vector_pop.o \
 	vector_insert_all.o vector_insert.o vector_init.o vector_free.o \
 	internal/vector_shrink.o internal/vector_grow_above.o \
 	internal/vector_grow.o
-VECTOR_OBJ = $(addprefix vector/$(OBJS_DIR)/, ${VECTOR})
+VECTOR_OBJ = $(addprefix $(OBJS_DIR)/vector/, ${VECTOR})
 
+STRING_INC = dyn_str/dyn_str.h dyn_str/internal/dyn_str_internal.h
+STRING = dyn_str_append.o dyn_str_append_chr.o dyn_str_clone.o \
+dyn_str_create.o dyn_str_delete.o dyn_str_delete_chr.o dyn_str_dup.o \
+dyn_str_fill.o dyn_str_free.o dyn_str_insert.o dyn_str_insert_chr.o \
+internal/dyn_str_expand.o internal/dyn_str_shrink.o internal/dyn_str_util.o
+STRING_OBJ = $(addprefix $(OBJS_DIR)/dyn_str/, ${STRING})
+
+ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(PRINTF_OBJ) $(STRING_OBJ)
+ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(PRINTF_INC) $(STRING_INC)
 # objects directory
 OBJS_DIR = objs
-
-# Colors
-BLACK	= \033[30m
-RED		= \033[31m
-GREEN	= \033[32m
-YELLOW	= \033[93m
-BLUE	= \033[34m
-MAGENTA	= \033[35m
-CYAN	= \033[36m
-WHITE	= \033[37m
-RESET	= \033[0m
 
 # **************************************************************************** #
 #	rules																	   #
 # **************************************************************************** #
 all: $(NAME)
 
-$(NAME): $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ)
-	@ar rc $(NAME) $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ)
-	@echo "$(GREEN)LIB$(RESET) libft/$(NAME): $(GREEN)UPDATED!$(RESET)";
+$(NAME): $(ALL_OBJ)
+	ar rc $(NAME) $(ALL_OBJ)
 
-$(LIBFT_OBJ): $(OBJS_DIR)/%.o : %.c $(LIBFT_INC)| $(OBJS_DIR)
-	@gcc $(CFLAGS) $(MACROS) -c $< -o $@
-	@echo "$(YELLOW)OBJ$(RESET) libft/$@: $(YELLOW)UPDATED!$(RESET)";
-
-
-$(PRINTF_OBJ): ft_printf/$(OBJS_DIR)/%.o : ft_printf/%.c $(PRINTF_INC) | $(OBJS_DIR)
-	@gcc $(CFLAGS) -c $< -o $@
-	@echo "$(YELLOW)OBJ$(RESET) libft/$@: $(YELLOW)UPDATED!$(RESET)";
-
-$(VECTOR_OBJ): vector/$(OBJS_DIR)/%.o : vector/%.c $(VECTOR_INC) | $(OBJS_DIR)
+$(OBJS_DIR)/%.o : %.c
 	@mkdir -p $(dir $@)
-	@gcc $(CFLAGS) -c $< -o $@
-	@echo "$(YELLOW)OBJ$(RESET) libft/$@: $(YELLOW)UPDATED!$(RESET)";
+	$(CC) $(CFLAGS) $(MACROS) -c $< -o $@
 
-$(OBJS_DIR):
-	@if [ ! -d $(OBJS_DIR) ]; then \
-		echo "$(CYAN)DIR$(RESET) libft/$(OBJS_DIR)/: $(CYAN)CREATED!$(RESET)"; \
-		mkdir $(OBJS_DIR); \
-	fi;
-	@if [ ! -d ft_printf/$(OBJS_DIR) ]; then \
-		echo "$(CYAN)DIR$(RESET) libft/ft_printf/$(OBJS_DIR)/: $(CYAN)CREATED!$(RESET)"; \
-		mkdir ft_printf/$(OBJS_DIR); \
-	fi;
-	@if [ ! -d vector/$(OBJS_DIR) ]; then \
-		echo "$(CYAN)DIR$(RESET) libft/vector/$(OBJS_DIR)/: $(CYAN)CREATED!$(RESET)"; \
-		mkdir vector/$(OBJS_DIR); \
-	fi;
+$(ALL_OBJ):  $(ALL_INC)
 
 clean:
-	@if [ -d $(OBJS_DIR) ]; then \
-		echo "$(RED)OBJ$(RESET) Libft objs: $(RED)REMOVED!$(RESET)"; \
-		rm -rf $(OBJS_DIR); \
-	fi;
-	@if [ -d ft_printf/$(OBJS_DIR) ]; then \
-		echo "$(RED)OBJ$(RESET) Printf objs: $(RED)REMOVED!$(RESET)"; \
-		rm -rf ft_printf/$(OBJS_DIR); \
-	fi;
-	@if [ -d vector/$(OBJS_DIR) ]; then \
-		echo "$(RED)OBJ$(RESET) Vector objs: $(RED)REMOVED!$(RESET)"; \
-		rm -rf vector/$(OBJS_DIR); \
-	fi;
+	rm -rf $(OBJS_DIR)
 
 fclean: clean
-	@if [ -f $(NAME) ]; then \
-		echo "$(RED)LIB$(RESET) $(NAME): $(RED)REMOVED!$(RESET)"; \
-		rm -f $(NAME); \
-	fi;
+	rm -f $(NAME)
 
-re: fclean all
+re: 
+	make fclean 
+	make all
 
 .PHONY: all fclean re clean
