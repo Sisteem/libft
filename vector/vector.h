@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 11:13:05 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/12 18:53:00 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/02 18:42:11 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ typedef struct	s_vector
 	void		(*free_element)(void *element);
 	void		*array;
 }				t_vector;
+
 t_vector		*vector_init(size_t element_size
 	, void (*free_element)(void *element));
+t_vector		*vector_init_capacity(size_t element_size, size_t capacity,
+					void (*free_element)(void *element));
 int				vector_push(t_vector *vector, void *element);
 int				vector_insert(t_vector *vector, void *element, size_t index);
 int				vector_pop(t_vector *vector, void *element);
