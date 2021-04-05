@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/20 16:20:13 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/05 11:20:07 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char		*ft_strdup(const char *s1);
 char		*ft_strdup_free(const char **s);
 int			ft_strequ(char const *s1, char const *s2);
 char		*ft_strglue(char const *s1, char glue, char const *s2);
-size_t		ft_strichr(const char *s, int c);
+int			ft_strichr(const char *s, int c);
 size_t		ft_strings_array_length(char **arr);
 void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
