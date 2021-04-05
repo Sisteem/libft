@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 13:43:43 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/05 14:01:45 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/05 18:23:04 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ void	*stack_pop(t_stack *stack)
 
 void	*stack_peek(t_stack *stack)
 {
+	if (stack->length == 0)
+		return (NULL);
 	return (stack->array + (stack->length - 1) * stack->element_size);
 }
