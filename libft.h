@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/05 11:20:07 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/05 14:03:52 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 # include "libft_typedefs.h"
 # include "vector/vector.h"
+# include "stack/stack.h"
 # include "dyn_str/dyn_str.h"
 
 /*

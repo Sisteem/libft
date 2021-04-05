@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/03/20 16:54:26 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/04/05 14:01:10 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o \
 	get_next_line.o ft_realloc.o ft_free_strings_array.o \
-	ft_malloc.o ft_strings_array_length.o
+	ft_malloc.o ft_strings_array_length.o \
+	stack/stack.o
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
@@ -64,7 +65,7 @@ PRINTF = conv_di.o conv_u.o conv_o.o \
 PRINTF_OBJ = $(addprefix $(OBJS_DIR)/ft_printf/, ${PRINTF})
 
 # vector
-VECTOR_INC = vector/vector.h vector/internal/vector_internal.h libft.h 
+VECTOR_INC = vector/vector.h vector/internal/vector_internal.h libft.h
 VECTOR = vector_remove.o vector_push.o vector_pop_index.o vector_pop.o \
 	vector_insert_all.o vector_insert.o vector_init.o vector_free.o \
 	internal/vector_shrink.o internal/vector_grow_above.o \
@@ -103,8 +104,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: 
-	make fclean 
+re:
+	make fclean
 	make all
 
 .PHONY: all fclean re clean
