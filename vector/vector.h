@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 11:13:05 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/02 18:42:11 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:47:36 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,6 @@ void			vector_free(t_vector *vector);
 int				vector_remove(t_vector *vector, size_t index);
 int				vector_insert_all(t_vector *vector, t_vector *inserted_vec
 	, size_t index);
+void			*vector_get(t_vector *vector, size_t index);
+
 #endif
