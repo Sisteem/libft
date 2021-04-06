@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 04:02:23 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/06 16:07:45 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 18:20:47 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static size_t	get_end(char const *s, size_t start)
 	while (start < end && ft_isspace(s[end]))
 		--end;
 	++end;
+	return (end);
 }
 
 char	*ft_strtrim(char const *s)
