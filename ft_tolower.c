@@ -6,11 +6,13 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 21:34:47 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/15 08:52:52 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 17:00:27 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	return (c >= 'A' && c <= 'Z' ? c + 32 : c);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

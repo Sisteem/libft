@@ -6,13 +6,13 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 22:25:16 by ylagtab           #+#    #+#             */
-/*   Updated: 2019/12/09 22:26:19 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:38:06 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_lstpush(t_list **alst, t_list *new)
+void	ft_lstpush(t_list **alst, t_list *new)
 {
 	t_list	*tmp;
 

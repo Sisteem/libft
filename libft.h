@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/05 14:03:52 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 16:46:59 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ char		*ft_strnew(size_t size);
 char		*ft_strtrim(char const *s);
 char		**ft_strsplit(char const *s, char c);
 void		ft_strrev(char *s);
-int			get_next_line(const int fd, char **line);
 void		ft_free_strings_array(char **array);
 
 /*

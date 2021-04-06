@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 03:52:47 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/01/18 18:38:36 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 16:59:42 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	if ((new_str = (char *)ft_malloc(len1 + len2 + 1)) == NULL)
+	new_str = (char *)ft_malloc(len1 + len2 + 1);
+	if (new_str == NULL)
 		return (NULL);
 	i = -1;
 	while (++i < len1)

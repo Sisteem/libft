@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit_lst.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 16:24:42 by ylagtab           #+#    #+#             */
-/*   Updated: 2019/04/20 03:11:38 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:54:34 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_strsplit_lst(char const *s, char c)
+t_list	*ft_strsplit_lst(char const *s, char c)
 {
 	t_list	*head;
 	t_list	*tmp;

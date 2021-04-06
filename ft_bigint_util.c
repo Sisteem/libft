@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bigint_util.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vanderwolk <vanderwolk@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:07:53 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/09/10 01:05:43 by vanderwolk       ###   ########.fr       */
+/*   Updated: 2021/04/06 16:59:19 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_bigint_is_zero(t_bigint *bg_int)
+int	ft_bigint_is_zero(t_bigint *bg_int)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (bg_int == NULL)
 		return (-1);
@@ -25,7 +25,7 @@ int		ft_bigint_is_zero(t_bigint *bg_int)
 	return (1);
 }
 
-int		ft_bigint_print(t_bigint *bg_int, int fd)
+int	ft_bigint_print(t_bigint *bg_int, int fd)
 {
 	int		len;
 	int		ret;

@@ -6,15 +6,15 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 15:47:04 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/15 08:37:09 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:44:57 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putunbr_fd(unsigned long long n, int fd)
+int	ft_putunbr_fd(unsigned long long n, int fd)
 {
-	int ret;
+	int	ret;
 
 	ret = 0;
 	if (n / 10)

@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 04:11:54 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/15 12:06:03 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:51:05 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strglue(char const *s1, char glue, char const *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	new_str = ft_strnew(len1 + len2 + 2);
+	if (new_str == NULL)
+		return (NULL);
 	i = -1;
 	while (++i < len1)
 		new_str[i] = s1[i];

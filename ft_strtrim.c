@@ -6,11 +6,31 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 04:02:23 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/01/15 19:17:35 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 16:07:45 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	get_start(char const *s)
+{
+	size_t	start;
+
+	start = 0;
+	while (ft_isspace(s[start]))
+		++start;
+	return (start);
+}
+
+static size_t	get_end(char const *s, size_t start)
+{
+	size_t	end;
+
+	end = ft_strlen(s) - 1;
+	while (start < end && ft_isspace(s[end]))
+		--end;
+	++end;
+}
 
 char	*ft_strtrim(char const *s)
 {
@@ -21,14 +41,10 @@ char	*ft_strtrim(char const *s)
 
 	if (s == NULL)
 		return (NULL);
-	start = 0;
-	while (ft_isspace(s[start]))
-		++start;
-	end = ft_strlen(s) - 1;
-	while (start < end && ft_isspace(s[end]))
-		--end;
-	++end;
-	if ((new_str = (char *)ft_malloc(end - start + 1)) == NULL)
+	start = get_start(s);
+	end = get_end(s, start);
+	new_str = (char *)ft_malloc(end - start + 1);
+	if (new_str == NULL)
 		return (NULL);
 	i = 0;
 	while (start < end)

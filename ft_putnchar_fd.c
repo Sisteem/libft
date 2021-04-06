@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vanderwolk <vanderwolk@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 19:47:09 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/09/09 23:39:50 by vanderwolk       ###   ########.fr       */
+/*   Updated: 2021/04/06 15:42:51 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putnchar_fd(char c, int n, int fd)
+int	ft_putnchar_fd(char c, int n, int fd)
 {
-	int ret;
+	int	ret;
 
 	ret = n;
 	while (n--)

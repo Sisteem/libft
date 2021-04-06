@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstreverse.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 19:46:52 by ylagtab           #+#    #+#             */
-/*   Updated: 2019/04/15 01:05:38 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:38:14 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_lstreverse(t_list **alst)
+void	ft_lstreverse(t_list **alst)
 {
 	t_list	*next;
 	t_list	*prev;

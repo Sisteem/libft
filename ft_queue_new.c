@@ -6,13 +6,13 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 20:06:07 by ylagtab           #+#    #+#             */
-/*   Updated: 2019/12/24 19:05:42 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:45:23 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_queue			*ft_queue_new(void)
+t_queue	*ft_queue_new(void)
 {
 	t_queue	*queue;
 

@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 15:47:04 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/15 08:32:44 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:42:33 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putnbr_fd(int n, int fd)
 {
-	int ret;
+	int	ret;
 
 	ret = 0;
 	if (n >= 10 || n <= -10)

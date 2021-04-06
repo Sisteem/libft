@@ -6,11 +6,13 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 21:34:45 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/15 08:52:36 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 17:00:51 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	return (c >= 'a' && c <= 'z' ? c - 32 : c);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

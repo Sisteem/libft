@@ -6,15 +6,15 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 17:32:12 by ylagtab           #+#    #+#             */
-/*   Updated: 2019/10/07 13:25:16 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:53:16 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (s1 == NULL || s2 == NULL)

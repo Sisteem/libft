@@ -6,15 +6,15 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 23:55:19 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/02/27 22:15:12 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:31:53 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isspace(int c)
 {
-	unsigned char ch;
+	unsigned char	ch;
 
 	ch = (unsigned char)c;
-	return (ch == '\t' || ch == '\v' || ch == '\f' ||
-		ch == '\n' || ch == '\r' || ch == ' ');
+	return (ch == '\t' || ch == '\v' || ch == '\f'
+		|| ch == '\n' || ch == '\r' || ch == ' ');
 }

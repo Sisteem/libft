@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 22:08:13 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/14 11:56:31 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:39:36 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (d[i] == c)
-			return (void *)(d + i + 1);
+			return ((void *)(d + i + 1));
 	}
 	return (NULL);
 }

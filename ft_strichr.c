@@ -6,13 +6,13 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 19:05:08 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/05 11:19:29 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 15:51:17 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strichr(const char *s, int c)
+int	ft_strichr(const char *s, int c)
 {
 	size_t	i;
 	char	ch;
