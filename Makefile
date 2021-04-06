@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/06 15:47:06 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/04/06 18:21:25 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memdel.o ft_memmove.o \
 	ft_memset.o ft_putchar.o ft_putchar_fd.o ft_putendl.o ft_putendl_fd.o \
 	ft_putnbr.o ft_putnbr_fd.o ft_putnchar.o ft_putnchar_fd.o ft_putstr.o \
-	ft_putstr_fd.o ft_putunbr.o ft_putunbr_fd.o ft_putunbr_base.o ft_putunbr_base_fd.o \
-	ft_strcat.o ft_strchr.o ft_strclr.o ft_strcmp.o \
+	ft_putstr_fd.o ft_putunbr.o ft_putunbr_fd.o ft_putunbr_base.o  \
+	ft_putunbr_base_fd.o ft_strcat.o ft_strchr.o ft_strclr.o ft_strcmp.o \
 	ft_strcpy.o ft_strdel.o ft_strdup.o ft_strequ.o ft_strichr.o \
 	ft_striter.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlen.o \
 	ft_strmap.o ft_strmapi.o ft_strncat.o ft_strncmp.o ft_strncpy.o \
@@ -48,30 +48,19 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_add.o ft_bigint_mult.o ft_bigint_power.o ft_bigint_init.o \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o \
-	get_next_line.o ft_realloc.o ft_free_strings_array.o \
-	ft_malloc.o ft_strings_array_length.o \
-	stack/stack.o
+	ft_realloc.o ft_free_strings_array.o ft_malloc.o ft_strings_array_length.o
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
-# ft_printf
-PRINTF_INC = libft.h ft_printf/ft_printf.h
-PRINTF = conv_di.o conv_u.o conv_o.o \
-	conv_c.o conv_s.o conv_f.o \
-	conv_f_helper.o conv_percenatge.o conv_x.o \
-	conv_p.o ft_printf.o parser.o \
-	util.o apply_conv_function.o read_numbers.o \
-	get_whole.o get_fraction.o round_float.o
-PRINTF_OBJ = $(addprefix $(OBJS_DIR)/ft_printf/, ${PRINTF})
-
 # vector
-VECTOR_INC = vector/vector.h vector/internal/vector_internal.h libft.h
+VECTOR_INC = vector/vector.h vector/internal/vector_internal.h
 VECTOR = vector_remove.o vector_push.o vector_pop_index.o vector_pop.o \
 	vector_insert_all.o vector_insert.o vector_init.o vector_free.o \
 	vector_get.o internal/vector_shrink.o internal/vector_grow_above.o \
 	internal/vector_grow.o
 VECTOR_OBJ = $(addprefix $(OBJS_DIR)/vector/, ${VECTOR})
 
+# dynstr
 STRING_INC = dyn_str/dyn_str.h dyn_str/internal/dyn_str_internal.h
 STRING = dyn_str_append.o dyn_str_append_chr.o dyn_str_clone.o \
 dyn_str_create.o dyn_str_delete.o dyn_str_delete_chr.o dyn_str_dup.o \
@@ -79,8 +68,13 @@ dyn_str_fill.o dyn_str_free.o dyn_str_insert.o dyn_str_insert_chr.o \
 internal/dyn_str_expand.o internal/dyn_str_shrink.o internal/dyn_str_util.o
 STRING_OBJ = $(addprefix $(OBJS_DIR)/dyn_str/, ${STRING})
 
-ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(PRINTF_OBJ) $(STRING_OBJ)
-ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(PRINTF_INC) $(STRING_INC)
+# stack
+STACK_INC = stack/stack.h
+STACK = stack.o
+STACK_OBJ = $(addprefix $(OBJS_DIR)/vector/, ${VECTOR})
+
+ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(STRING_OBJ) $(STACK_OBJ)
+ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(STRING_INC) $(STACK_INC)
 # objects directory
 OBJS_DIR = objs
 
