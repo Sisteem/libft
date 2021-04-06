@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 13:43:43 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/05 18:23:04 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/06 18:16:40 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*stack_new(size_t element_size,
 	void (*free_element)(void *element))
 {
-	t_vector *vec;
+	t_vector	*vec;
 
 	vec = vector_init(element_size, free_element);
 	return (vec);
