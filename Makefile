@@ -6,7 +6,7 @@
 #    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/06 18:21:25 by ylagtab          ###   ########.fr        #
+#    Updated: 2021/04/07 11:32:50 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_strmap.o ft_strmapi.o ft_strncat.o ft_strncmp.o ft_strncpy.o \
 	ft_strnequ.o ft_strnew.o ft_strnstr.o ft_strrchr.o ft_strrev.o \
 	ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_tolower.o \
-	ft_toupper.o ft_write_buff.o \
+	ft_toupper.o \
 	ft_bigint_add.o ft_bigint_mult.o ft_bigint_power.o ft_bigint_init.o \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o \
@@ -71,7 +71,7 @@ STRING_OBJ = $(addprefix $(OBJS_DIR)/dyn_str/, ${STRING})
 # stack
 STACK_INC = stack/stack.h
 STACK = stack.o
-STACK_OBJ = $(addprefix $(OBJS_DIR)/vector/, ${VECTOR})
+STACK_OBJ = $(addprefix $(OBJS_DIR)/stack/, ${STACK})
 
 ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(STRING_OBJ) $(STACK_OBJ)
 ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(STRING_INC) $(STACK_INC)

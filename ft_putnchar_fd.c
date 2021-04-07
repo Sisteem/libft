@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 19:47:09 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/06 15:42:51 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/07 11:30:48 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 int	ft_putnchar_fd(char c, int n, int fd)
 {
-	int	ret;
+	char	*str;
+	int		size;
 
-	ret = n;
+	size = n;
+	str = ft_malloc(size);
 	while (n--)
-		ft_write_buff(&c, 1, fd);
-	return (ret);
+		str[n] = c;
+	write(fd, str, size);
+	return (size);
 }

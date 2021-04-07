@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/06 16:46:59 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/07 11:33:00 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,9 +120,6 @@ int			ft_putnbr_fd(int n, int fd);
 int			ft_putunbr_fd(unsigned long long n, int fd);
 int			ft_putunbr_base_fd(unsigned long long n, int base, int is_upper,
 				int fd);
-int			ft_write_buff(char *str, size_t size, int fd);
-void		ft_flush_buff(int fd);
-int			ft_printf(int fd, char *format, ...);
 
 /*
 **	List

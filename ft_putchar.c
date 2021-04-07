@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vanderwolk <vanderwolk@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 05:38:59 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/09/09 22:20:29 by vanderwolk       ###   ########.fr       */
+/*   Updated: 2021/04/07 11:27:45 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar(char c)
 {
-	return (ft_write_buff(&c, 1, 1));
+	return (write(1, &c, 1));
 }
