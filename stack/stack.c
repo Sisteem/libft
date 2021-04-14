@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 13:43:43 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/06 18:16:40 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/12 15:52:11 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ void	*stack_pop(t_stack *stack)
 	element_to_pop = stack->array + (stack->length - 1) * stack->element_size;
 	ft_memcpy(el, element_to_pop, stack->element_size);
 	ft_bzero(element_to_pop, stack->element_size);
+	--(stack->length);
+	if (stack->length > 16 && stack->length <= stack->capacity / 4)
+		vector_shrink(stack);
 	return (el);
 }
 
