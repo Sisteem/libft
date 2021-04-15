@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/07 11:33:00 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/13 15:44:51 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,12 @@ t_bigint	*ft_bigint_from_uint128(__uint128_t unbr);
 t_bigint	*ft_bigint_power(unsigned int b, unsigned int exp);
 int			ft_bigint_print(t_bigint *bg_int, int fd);
 int			ft_bigint_is_zero(t_bigint *bg_int);
+
+/*
+** Ternaries
+*/
+long		ter_l(int bool, long val1, long val2);
+int			ter_i(int bool, int val1, int val2);
+
 
 #endif

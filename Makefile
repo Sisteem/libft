@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
+#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/07 11:32:50 by ylagtab          ###   ########.fr        #
+#    Updated: 2021/04/13 16:10:08 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,19 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_add.o ft_bigint_mult.o ft_bigint_power.o ft_bigint_init.o \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o \
-	ft_realloc.o ft_free_strings_array.o ft_malloc.o ft_strings_array_length.o
+	ft_realloc.o ft_free_strings_array.o ft_malloc.o ft_strings_array_length.o \
+	ter_l.o ter_i.o
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
+
+# ft_printf
+PRINTF_INC = libft.h ft_printf/ft_printf.h
+PRINTF = conv_di.o conv_u.o \
+	conv_c.o conv_s.o \
+	conv_percenatge.o \
+	ft_printf.o parser.o \
+	util.o apply_conv_function.o read_numbers.o
+PRINTF_OBJ = $(addprefix $(OBJS_DIR)/ft_printf/, ${PRINTF})
 
 # vector
 VECTOR_INC = vector/vector.h vector/internal/vector_internal.h
@@ -73,8 +83,8 @@ STACK_INC = stack/stack.h
 STACK = stack.o
 STACK_OBJ = $(addprefix $(OBJS_DIR)/stack/, ${STACK})
 
-ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(STRING_OBJ) $(STACK_OBJ)
-ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(STRING_INC) $(STACK_INC)
+ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(PRINTF_OBJ) $(STRING_OBJ) $(STACK_OBJ)
+ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(PRINTF_INC) $(STRING_INC) $(STACK_INC)
 # objects directory
 OBJS_DIR = objs
 
