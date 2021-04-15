@@ -6,13 +6,13 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/05 16:29:58 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/15 12:37:59 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/vector_internal.h"
 
-int			vector_insert(t_vector *vector, void *element, size_t index)
+int	vector_insert(t_vector *vector, void *element, size_t index)
 {
 	if (!vector || !element)
 		return (-1);

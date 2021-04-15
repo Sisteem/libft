@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/13 15:44:51 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/15 12:32:40 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,6 @@ int			ft_bigint_is_zero(t_bigint *bg_int);
 */
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
-
+uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
 
 #endif

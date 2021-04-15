@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   dyn_str.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 18:41:31 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/12 14:46:48 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/15 12:20:55 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DYN_STR_H
 # define DYN_STR_H
 
-typedef struct	s_dyn_str
+typedef struct s_dyn_str
 {
 	char		*str;
 	size_t		len;
 	size_t		capacity;
 }				t_dyn_str;
-typedef	enum	e_delete_mode
+typedef enum e_delete_mode
 {
 	BY_SIZE,
 	TO_END,

@@ -6,13 +6,13 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/12 14:11:13 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/15 12:39:20 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/vector_internal.h"
 
-int			vector_remove(t_vector *vector, size_t index)
+int	vector_remove(t_vector *vector, size_t index)
 {
 	if (!vector || index >= vector->length || vector->length == 0)
 		return (-1);

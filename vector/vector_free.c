@@ -6,21 +6,21 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/12 14:11:13 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/15 13:02:37 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/vector_internal.h"
 
-void		vector_free(t_vector *vector)
+void	vector_free(t_vector *vector)
 {
-	size_t i;
+	size_t	i;
 
 	if (vector->free_element)
 	{
 		i = 0;
 		while (i < vector->length)
-			vector->free_element(vector->array + i++ * vector->element_size);
+			vector->free_element(vector->array + vector->element_size * i++);
 	}
 	free(vector->array);
 	free(vector);

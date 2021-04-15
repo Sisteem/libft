@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:32:59 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/02 18:47:18 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/15 12:37:47 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_vector	*vector_init(size_t element_size,
 		void (*free_element)(void *element))
 {
-	t_vector *vec;
+	t_vector	*vec;
 
 	vec = ft_malloc(sizeof(t_vector));
 	vec->array = ft_malloc(element_size * 16);
