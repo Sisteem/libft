@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/18 15:37:45 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/04/18 17:02:34 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ char		*ft_strtrim(char const *s);
 char		**ft_strsplit(char const *s, char c);
 void		ft_strrev(char *s);
 void		ft_free_strings_array(char **array);
+int			ft_str_isnumeric(char *s);
 
 /*
 **	Chars
@@ -121,6 +122,7 @@ int			ft_putnbr_fd(int n, int fd);
 int			ft_putunbr_fd(unsigned long long n, int fd);
 int			ft_putunbr_base_fd(unsigned long long n, int base, int is_upper,
 				int fd);
+int			ft_printf(int fd, char *format, ...);
 
 /*
 **	List
