@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   apply_conv_function.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 21:01:12 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/13 15:37:16 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:07 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_internals.h"
 
 int	apply_conv_function(t_conv_spec *conv_spec, va_list *ap, int c)
 {

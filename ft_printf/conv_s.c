@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   conv_s.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 00:12:42 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/13 17:20:06 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:17 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_internals.h"
 
 int	conv_s(t_conv_spec *conv_spec, va_list *ap)
 {

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 21:20:03 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/13 17:26:23 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:27 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdarg.h>
+#include "ft_printf_internals.h"
 
 static void	clean_up(va_list *ap)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   conv_u.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:44:55 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/13 16:02:02 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:20 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_internals.h"
 
 static int	get_spaces(t_conv_spec *conv_spec, t_specs *specs)
 {

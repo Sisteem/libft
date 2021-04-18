@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   conv_percenatge.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 13:54:40 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/13 17:19:28 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:15 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_internals.h"
 
 int	conv_percenatge(t_conv_spec *conv_spec)
 {

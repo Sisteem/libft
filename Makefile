@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/13 16:10:08 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/04/18 15:39:28 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
 # ft_printf
-PRINTF_INC = libft.h ft_printf/ft_printf.h
+PRINTF_INC = libft.h ft_printf/ft_printf.h ft_printf/ft_printf_internals.h
 PRINTF = conv_di.o conv_u.o \
 	conv_c.o conv_s.o \
 	conv_percenatge.o \

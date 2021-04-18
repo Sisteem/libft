@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   util.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 16:31:50 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/13 16:04:08 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:34:44 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "ft_printf.h"
 
 int	is_in_str(int c, char *str)
 {
