@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/18 17:02:34 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/30 16:27:35 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ char		**ft_strsplit(char const *s, char c);
 void		ft_strrev(char *s);
 void		ft_free_strings_array(char **array);
 int			ft_str_isnumeric(char *s);
+char		**ft_strsplit2(char const *s, char c, t_split_mode split_mode);
 
 /*
 **	Chars
@@ -93,6 +94,7 @@ int			ft_toupper(int c);
 int			ft_isupper(int c);
 int			ft_islower(int c);
 int			ft_isspace(int c);
+int			ft_iscntrl(char c);
 
 /*
 **	Numbers
@@ -107,7 +109,7 @@ long long	ft_power(int nbr, int exp);
 /*
 **	Printing
 */
-int			ft_putchar(char c);
+int			ft_putchar(int c);
 int			ft_putnchar(char c, int n);
 int			ft_putstr(char const *str);
 int			ft_putendl(char const *s);
