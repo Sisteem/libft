@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/30 16:27:35 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/30 16:52:54 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void		ft_strrev(char *s);
 void		ft_free_strings_array(char **array);
 int			ft_str_isnumeric(char *s);
 char		**ft_strsplit2(char const *s, char c, t_split_mode split_mode);
+char		*ft_strndup(const char *s, size_t n);
 
 /*
 **	Chars
