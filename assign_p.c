@@ -6,14 +6,17 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/01 10:59:03 by hmzah             #+#    #+#             */
-/*   Updated: 2021/05/01 14:35:57 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 14:51:40 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*assign_p(void **ret, void *value)
+void	*assign_p(void *ret, void *value)
 {
-	*ret = value;
-	return (*ret);
+	void	**tmp;
+
+	tmp = (void **)ret;
+	*tmp = value;
+	return (value);
 }
