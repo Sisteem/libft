@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/05/01 14:25:15 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 14:26:31 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,5 @@ int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
 void		*ter_p(int bool, void *val1, void *val2);
 uint32_t	ter_ui(int bool, uint32_t val1, uint32_t val2);
-void		*ter_v(int bool, void *val1, void *val2);
 
 #endif

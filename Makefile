@@ -6,7 +6,7 @@
 #    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/05/01 14:25:36 by ylagtab          ###   ########.fr        #
+#    Updated: 2021/05/01 14:30:07 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ endif
 
 # libft
 LIBFT_INC = libft.h
-LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
+LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o \
 	ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 	ft_islower.o ft_isprint.o ft_isspace.o ft_isupper.o ft_itoa.o \
 	ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o ft_lstmap.o \
@@ -49,8 +49,9 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o ft_strndup.o \
 	ft_realloc.o ft_free_strings_array.o ft_malloc.o ft_strings_array_length.o \
-	ter_ui.o \
-	ter_l.o ter_i.o ter_v.o assign_v.o assign_i.o assign_ul.o ft_str_isnumeric.o
+	ter_ui.o ter_l.o ter_i.o assign_v.o assign_i.o assign_ul.o \
+	ft_str_isnumeric.o
+
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
