@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:44:52 by aait-ihi          #+#    #+#             */
-/*   Updated: 2021/05/01 14:46:04 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 15:14:48 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_d_list	*ft_dlstenqueue(t_d_list **list, t_d_list *new)
 			(*list)->tail->next = new;
 		else
 			(*list)->next = new;
-		(*list)->tail = ter_p(new->tail, new->tail, new);
+		(*list)->tail = ter_p((size_t)new->tail, new->tail, new);
 		return ((*list));
 	}
 	else if (new && list)
