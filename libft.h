@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/18 17:02:34 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/04/30 16:57:40 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # include "vector/vector.h"
 # include "stack/stack.h"
 # include "dyn_str/dyn_str.h"
+# include "additional_functions/additional_functions.h"
 
 /*
 ** Memory
@@ -101,7 +102,6 @@ int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
 int			ft_nbrlen(__uint128_t unbr);
 int			ft_nbrlen_base(unsigned long long n, int base);
-int			ft_max(int nbr1, int nbr2);
 long long	ft_power(int nbr, int exp);
 
 /*
@@ -158,5 +158,6 @@ int			ft_bigint_is_zero(t_bigint *bg_int);
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
+void		*ter_p(int bool, void *val1, void *val2);
 
 #endif

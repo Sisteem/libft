@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/27 13:41:44 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/05/01 14:17:39 by ylagtab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,21 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
+# additional_functions
+ADD_FUNC_INC = additional_functions/additional_functions.h
+ADD_FUNC = free_content_list.o free_pattern.o ft_atoi_base.o ft_count_chars.o \
+	ft_isinstr.o ft_isnalnum.o ft_max.o ft_die.o ft_find_int.o \
+	ft_skip_chars.o ft_skip_until_char.o ft_str_occurence.o ft_strindexof.o \
+	ft_strnjoin.o ft_strreplace.o ft_swap.o get_matched_bracket.o reg_match.o \
+	ft_dlstadd.o ft_dlstadd_end.o ft_dlstcontent_iter.o ft_dlstdel.o \
+	ft_dlstdelone.o ft_dlstdequeue.o ft_dlstenqueue.o ft_dlstiter.o \
+	ft_dlstlen.o ft_dlstmap.o ft_dlstnew.o ft_dlstrev.o ft_dlstsearch.o \
+	ft_dlstsort.o
+
+ADD_FUNC_OBJ = $(addprefix $(OBJS_DIR)/additional_functions/, ${ADD_FUNC})
+
 # ft_printf
-PRINTF_INC = libft.h ft_printf/ft_printf.h ft_printf/ft_printf_internals.h
+PRINTF_INC = ft_printf/ft_printf.h ft_printf/ft_printf_internals.h
 PRINTF = conv_di.o conv_u.o \
 	conv_c.o conv_s.o \
 	conv_percenatge.o \
@@ -83,8 +96,8 @@ STACK_INC = stack/stack.h
 STACK = stack.o
 STACK_OBJ = $(addprefix $(OBJS_DIR)/stack/, ${STACK})
 
-ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(PRINTF_OBJ) $(STRING_OBJ) $(STACK_OBJ)
-ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(PRINTF_INC) $(STRING_INC) $(STACK_INC)
+ALL_OBJ = $(LIBFT_OBJ) $(VECTOR_OBJ) $(PRINTF_OBJ) $(STRING_OBJ) $(STACK_OBJ) $(ADD_FUNC_OBJ)
+ALL_INC = $(LIBFT_INC) $(VECTOR_INC) $(PRINTF_INC) $(STRING_INC) $(STACK_INC) $(ADD_FUNC_INC)
 # objects directory
 OBJS_DIR = objs
 
