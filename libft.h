@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/30 16:57:40 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 14:25:15 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # include "stack/stack.h"
 # include "dyn_str/dyn_str.h"
 # include "additional_functions/additional_functions.h"
+
+typedef unsigned long	t_ul;
 
 /*
 ** Memory
@@ -80,6 +82,8 @@ char		**ft_strsplit(char const *s, char c);
 void		ft_strrev(char *s);
 void		ft_free_strings_array(char **array);
 int			ft_str_isnumeric(char *s);
+char		**ft_strsplit2(char const *s, char c, t_split_mode split_mode);
+char		*ft_strndup(const char *s, size_t n);
 
 /*
 **	Chars
@@ -94,6 +98,7 @@ int			ft_toupper(int c);
 int			ft_isupper(int c);
 int			ft_islower(int c);
 int			ft_isspace(int c);
+int			ft_iscntrl(char c);
 
 /*
 **	Numbers
@@ -107,7 +112,7 @@ long long	ft_power(int nbr, int exp);
 /*
 **	Printing
 */
-int			ft_putchar(char c);
+int			ft_putchar(int c);
 int			ft_putnchar(char c, int n);
 int			ft_putstr(char const *str);
 int			ft_putendl(char const *s);
@@ -155,9 +160,14 @@ int			ft_bigint_is_zero(t_bigint *bg_int);
 /*
 ** Ternaries
 */
+t_ul		assign_ul(unsigned long *ret, unsigned long value);
+int			assign_i(int *ret, int value);
+void		*assign_v(void **ret, void *value);
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
 void		*ter_p(int bool, void *val1, void *val2);
+uint32_t	ter_ui(int bool, uint32_t val1, uint32_t val2);
+void		*ter_v(int bool, void *val1, void *val2);
 
 #endif

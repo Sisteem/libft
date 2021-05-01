@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 05:38:59 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/30 15:41:14 by mel-idri         ###   ########.fr       */
+/*   Created: 2020/05/08 11:28:58 by mel-idri          #+#    #+#             */
+/*   Updated: 2021/05/01 10:04:02 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(int c)
+char	*ft_strndup(const char *s, size_t n)
 {
-	return (write(1, &c, 1));
+	char	*new_str;
+
+	new_str = ft_strnew(n);
+	if (s == NULL || new_str == NULL)
+		return (NULL);
+	return (ft_strncpy(new_str, s, n));
 }

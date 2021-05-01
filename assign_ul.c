@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   assign_ul.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 05:38:59 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/30 15:41:14 by mel-idri         ###   ########.fr       */
+/*   Created: 2021/05/01 11:38:34 by hmzah             #+#    #+#             */
+/*   Updated: 2021/05/01 11:46:38 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(int c)
+unsigned long	assign_ul(unsigned long *ret, unsigned long value)
 {
-	return (write(1, &c, 1));
+	*ret = value;
+	return (value);
 }

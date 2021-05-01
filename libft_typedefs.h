@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 08:56:12 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/05/01 13:46:36 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 14:25:20 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,10 @@ typedef struct s_bigint
 	char	*digits;
 	size_t	length;
 }				t_bigint;
+typedef enum e_split_mode
+{
+	ALLOW_EMPTY_WORD,
+	REJECT_EMPTY_WORD
+}				t_split_mode;
 
 #endif

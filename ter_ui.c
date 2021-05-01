@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ter_ui.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 05:38:59 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/30 15:41:14 by mel-idri         ###   ########.fr       */
+/*   Created: 2021/04/13 15:38:21 by mel-idri          #+#    #+#             */
+/*   Updated: 2021/05/01 03:38:57 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(int c)
+uint32_t	ter_ui(uint32_t bool, uint32_t val1, uint32_t val2)
 {
-	return (write(1, &c, 1));
+	if (bool)
+		return (val1);
+	else
+		return (val2);
 }

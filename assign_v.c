@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   assign_v.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 05:38:59 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/30 15:41:14 by mel-idri         ###   ########.fr       */
+/*   Created: 2021/05/01 10:59:03 by hmzah             #+#    #+#             */
+/*   Updated: 2021/05/01 11:46:41 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(int c)
+void	*assign_v(void **ret, void *value)
 {
-	return (write(1, &c, 1));
+	*ret = value;
+	return (*ret);
 }
