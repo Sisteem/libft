@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ter_ui.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:38:21 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/05/01 03:38:57 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/05/01 14:35:33 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-uint32_t	ter_ui(uint32_t bool, uint32_t val1, uint32_t val2)
+uint32_t	ter_ui(int bool, uint32_t val1, uint32_t val2)
 {
 	if (bool)
 		return (val1);
