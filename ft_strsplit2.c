@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 23:56:23 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/30 16:23:48 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/05/01 10:02:57 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int			count_words(const char *s, char c)
+static	int	count_words(const char *s, char c)
 {
 	int		words;
 	size_t	i;
@@ -48,7 +48,7 @@ static unsigned int	char_count(char const *s, char c)
 	return (count);
 }
 
-static char			**split_reject_empty(char const *s, char c)
+static char	**split_reject_empty(char const *s, char c)
 {
 	char	**words;
 	size_t	i;
@@ -58,8 +58,8 @@ static char			**split_reject_empty(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if ((words = (char **)ft_memalloc((count_words(s, c) + 1) * sizeof(char *)))
-			== NULL)
+	words = (char **)ft_memalloc((count_words(s, c) + 1) * sizeof(char *));
+	if (words == NULL)
 		return (NULL);
 	while (s[i])
 	{
@@ -69,12 +69,15 @@ static char			**split_reject_empty(char const *s, char c)
 		while (s[i] != c && s[i])
 			i++;
 		end = i;
-		words[j++] = end - start > 0 ? ft_strsub(s, start, end - start) : NULL;
+		if (end - start > 0)
+			words[j] = ft_strsub(s, start, end - start);
+		else
+			words[j++] = NULL;
 	}
 	return (words);
 }
 
-static char			**split_allow_empty(char const *str, char c)
+static char	**split_allow_empty(char const *str, char c)
 {
 	size_t			i;
 	unsigned int	word_count;
@@ -84,16 +87,17 @@ static char			**split_allow_empty(char const *str, char c)
 
 	i = 0;
 	word_count = char_count(str, c) + 1;
-	words = ft_memalloc(sizeof(char*) * (word_count + 1));
-	i = 0;
-	start = (char*)str;
+	words = ft_memalloc(sizeof(char *) * (word_count + 1));
+	start = (char *)str;
 	while (1)
 	{
 		end = start;
 		while (*end && *end != c)
 			end++;
 		words[i++] = ft_strndup(start, end - start);
-		start = *end ? end + 1 : end;
+		if (*end)
+			start = end + 1;
+		start = end;
 		if (*start == '\0' && *end == '\0')
 			break ;
 	}
@@ -101,7 +105,7 @@ static char			**split_allow_empty(char const *str, char c)
 	return (words);
 }
 
-char				**ft_strsplit2(char const *s, char c,
+char	**ft_strsplit2(char const *s, char c,
 	t_split_mode split_mode)
 {
 	if (s == NULL)

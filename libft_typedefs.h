@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_typedefs.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 08:56:12 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/30 16:26:18 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/05/01 10:03:23 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ typedef struct s_bigint
 	char	*digits;
 	size_t	length;
 }				t_bigint;
-typedef enum	e_split_mode
+typedef enum e_split_mode
 {
 	ALLOW_EMPTY_WORD,
 	REJECT_EMPTY_WORD
