@@ -6,7 +6,7 @@
 #    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 21:20:45 by mel-idri          #+#    #+#              #
-#    Updated: 2021/04/30 16:52:28 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/05/01 03:39:27 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ LIBFT = ft_autoalloc.o ft_nbrlen.o ft_nbrlen_base.o ft_atoi.o  \
 	ft_bigint_util.o ft_queue_new.o ft_enqueue.o ft_dequeue.o \
 	ft_strglue.o ft_strjoin_free.o ft_strdup_free.o ft_strndup.o \
 	ft_realloc.o ft_free_strings_array.o ft_malloc.o ft_strings_array_length.o \
-	ter_l.o ter_i.o ft_str_isnumeric.o
+	ter_l.o ter_i.o ft_str_isnumeric.o ter_ui.o
 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, ${LIBFT})
 
