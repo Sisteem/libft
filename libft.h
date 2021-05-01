@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/05/01 03:25:58 by mel-idri         ###   ########.fr       */
-=======
-/*   Updated: 2021/05/01 11:40:41 by hmzah            ###   ########.fr       */
->>>>>>> Fixed norm, Added some functions
+/*   Updated: 2021/05/01 14:01:25 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,10 +166,7 @@ void		*assign_v(void **ret, void *value);
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
-<<<<<<< HEAD
 uint32_t	ter_ui(int bool, uint32_t val1, uint32_t val2);
-=======
 void		*ter_v(int bool, void *val1, void *val2);
->>>>>>> Fixed norm, Added some functions
 
 #endif
