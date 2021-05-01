@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   assign_v.c                                         :+:      :+:    :+:   */
+/*   assign_p.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/01 10:59:03 by hmzah             #+#    #+#             */
-/*   Updated: 2021/05/01 11:46:41 by hmzah            ###   ########.fr       */
+/*   Updated: 2021/05/01 14:35:57 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*assign_v(void **ret, void *value)
+void	*assign_p(void **ret, void *value)
 {
 	*ret = value;
 	return (*ret);

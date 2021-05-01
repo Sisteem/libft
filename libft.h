@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/05/01 14:26:31 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/01 14:33:35 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,7 +162,7 @@ int			ft_bigint_is_zero(t_bigint *bg_int);
 */
 t_ul		assign_ul(unsigned long *ret, unsigned long value);
 int			assign_i(int *ret, int value);
-void		*assign_v(void **ret, void *value);
+void		*assign_p(void **ret, void *value);
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
