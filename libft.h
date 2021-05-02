@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/05/01 14:52:55 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/02 02:23:40 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ char		*ft_itoa(int n);
 int			ft_nbrlen(__uint128_t unbr);
 int			ft_nbrlen_base(unsigned long long n, int base);
 long long	ft_power(int nbr, int exp);
+t_bool		ft_between(long value, long great, long small);
 
 /*
 **	Printing
@@ -163,6 +164,7 @@ int			ft_bigint_is_zero(t_bigint *bg_int);
 t_ul		assign_ul(unsigned long *ret, unsigned long value);
 int			assign_i(int *ret, int value);
 void		*assign_p(void *ret, void *value);
+char		assign_c(char *ret, char value);
 long		ter_l(int bool, long val1, long val2);
 int			ter_i(int bool, int val1, int val2);
 uint64_t	ter_ul(int bool, unsigned long val1, unsigned long val2);
