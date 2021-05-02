@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/05/02 02:23:40 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/05/02 02:49:00 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char		*ft_itoa(int n);
 int			ft_nbrlen(__uint128_t unbr);
 int			ft_nbrlen_base(unsigned long long n, int base);
 long long	ft_power(int nbr, int exp);
-t_bool		ft_between(long value, long great, long small);
+t_bool		ft_between(long value, long small, long great);
 
 /*
 **	Printing
