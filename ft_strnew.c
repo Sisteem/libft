@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 16:41:05 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/06 15:54:13 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/03 13:46:13 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnew(size_t size)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	while (i < size)
+	while (i < size + 1)
 	{
 		str[i] = '\0';
 		i++;
