@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/04/15 13:02:37 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/05/03 12:48:33 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	vector_free(t_vector *vector)
 {
 	size_t	i;
 
+	if (vector == NULL)
+		return ;
 	if (vector->free_element)
 	{
 		i = 0;
