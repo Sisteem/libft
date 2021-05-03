@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hmzah <hmzah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 19:47:09 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/04/07 11:30:48 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/03 15:20:51 by hmzah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	ft_putnchar_fd(char c, int n, int fd)
 	while (n--)
 		str[n] = c;
 	write(fd, str, size);
+	free(str);
 	return (size);
 }
