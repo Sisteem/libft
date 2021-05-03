@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 16:22:12 by ylagtab           #+#    #+#             */
-/*   Updated: 2021/05/01 14:15:22 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/03 12:13:11 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ char		*get_matched_bracket(char *str, const char *bracket,
 				char *to_skip, int escaping);
 t_d_list	*get_star_match(char *str, t_pattern *pattern);
 t_d_list	*is_matched(char *str, t_pattern *pattern);
+t_d_list	*reg_match(char *str, char *str_pattern);
 
 #endif
