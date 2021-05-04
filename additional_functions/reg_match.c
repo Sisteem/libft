@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reg_match.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 16:26:35 by aait-ihi          #+#    #+#             */
-/*   Updated: 2021/05/01 15:13:56 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/05/04 11:49:26 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,11 +100,9 @@ t_d_list	*is_matched(char *str, t_pattern *p)
 		else if (p->type == PT_QMARK)
 			str++;
 		else if (p->type == PT_CHAR)
-			*(p->str) = ter_i(*str && ((int)*str++ || 1) || (matched-- && 0),
-					(int)*str, matched);
+			(*(p->str) == *str && (str++ || 1)) || matched--;
 		else if (p->type == PT_CHAR_SEQ)
-			ter_i(ft_isinstr(*str, p->str) && ((int)*str++ || 1)
-				|| (matched-- && 0), (int)*str, matched);
+			(ft_isinstr(*str, p->str) && (str++ || 1)) || matched--;
 		else
 			return (NULL);
 		ter_p(matched, (p = p->next), 0);
